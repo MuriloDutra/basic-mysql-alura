@@ -1,0 +1,29 @@
+CHAR - Cadeia de caracteres com valor fixo (de 0 de 255)
+VARCHAR - Cadeia de caracteres com valor variado (de 0 a 255)
+
+CHAR(4) - "aa" -> "  aa" //armazena espaços em branco
+VARCHAR(4) - "aa" -> "aa"
+
+
+BINARY - Cadeia de caracteres com valor fixo (de 0 a 255). Expressos em Binário.
+VARBINARY - Cadeia de caracteres com valor variado (de 0 a 255). Expressos em Binário.
+
+BLOB - Binário longo. Podemos ter:
+    TINYBLOB
+    BLOB
+    MEDIUMBLOB
+
+TEXT - Texto longo
+    TINYTEXT
+    TEXT
+    MEDIUMTEXT
+    LONGTEXT
+
+ENUM
+    * Permite armazenar uma lista pré-definida de valores.
+    Exemplo:
+        Size ENUM('x-small','small','medium','large','x-large')
+
+ATRIBUTOS
+    SET e COLLATE - Que tipo de conjunto de caracteres serão suportados.
+    Exemplo: russo, árabe etc...

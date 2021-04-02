@@ -1,0 +1,47 @@
+----- INT -----
+    UNSIGNED: Não permite sinal no número. Por isso o conjunto de valores válidos aumentam.
+
+    tipo        | Valor em bytes | Menor valor (Signed) | Menor valor (Unsigned) | Menor valor (Signed) | Maior valor (Unsigned)
+
+    TINYINT              1               -128                     0                         127                    255
+    SMALLINT             2               -32768                   0                         32767                  65535
+    MEDIUMINT            3               -8388608                 0                         8388607                16777215
+    INT                  4               -2147483648              0                         2147483647             4294967295
+    BIGINT               8               -2xE63                   0                         2xE63 - 1               2xE64 - 1
+
+
+----- PONTO FLUTUANTE -----
+    Ponto flutuante: faz um arredondamento quando o número de casas decimais for maior do que o permitido no banco
+
+    FLOAT - Precisão simples (4 bytes)
+    DOUBLE - Precisão dupla (8 bytes) //Esse fará o arredondamento de números de forma mais precisa
+
+    Exemplo: Se declararmos um campo FLOAT(7, 4) se incluímos o número 999,00009 o valor armazenado será 999,0001
+    
+    Definição: FLOAT(7,4), o número terá 7 digitos, sendo 4 decimais, ou seja: 100,1234
+
+
+----- FIXOS -----
+    DECIMAL ou NUMERIC
+    
+    Tamanho: Até 65 dígitos
+    Especificamos o números de dígitos e o número de casas decimais.
+    
+    Exemplo: Se declararmos um campo DECIMAL(5,2) iremos poder armazenar valores somente entre -999,99 e 999,99
+
+    Número máximo de dígitos são 65
+
+
+----- BIT -----
+    Tamanho: Até 64 Bits
+    Exemplo: BIT(1) - Pode ser 1 ou 0
+    BIT(2) - Pode ser 01, 10, 00, 11
+
+
+----- ATRIBUTOS -----
+    SIGNED ou UNSIGNED - Vai possuir ou não sinal no número
+    
+    ZEROFILL - Preenche com Zeros os espaços
+        Exemplo: INT(4), Se armazenarmos o valor 5 será gravado 0005.
+
+    AUTO_INCREMENT - Sequência auto incrementada. Exemplo: 1, 2, 3, 4, 5...
