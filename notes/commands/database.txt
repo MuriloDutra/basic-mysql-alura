@@ -1,0 +1,3 @@
+-- To create a new database: CREATE DATABASE SUCOS;
+
+-- To delete a database: DROP DATABASE SUCOS;

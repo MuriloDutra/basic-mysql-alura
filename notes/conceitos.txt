@@ -1,0 +1,3 @@
+-   A entidade maior é o próprio banco de dados, ficando armazenado em disco.
+
+ 

@@ -1,0 +1,9 @@
+    - Comandos DDL
+    São os comandos que permitem a manipulação das estruturas do banco de dados. Exemplo: criar um banco, uma tabela, apagar a tabela, apagar o banco.
+
+    - Comandos DML
+    São os comandos que permitem gerenciar os dados, incluir, alterar, excluir, consultar.
+
+    - Comandos DCL
+    São os comandos que permitem administrar o banco de dados.
+    Exemplo: controle de acesso, gerenciar usuários, políticas de crescimento do banco, onde armazenar no disco as informações. 
