@@ -2,6 +2,8 @@ USE sucos_vendas;
 
 SELECT * FROM tabela_de_clientes;
 
+SELECT estado FROM tabela_de_clientes GROUP BY estado; /*Não irá repetir o nome dos estados, pois está criando um grupo dos mesmo*/
+
 SELECT estado, limite_de_credito FROM tabela_de_clientes;
 
 SELECT estado, SUM(limite_de_credito) AS LIMITE_TOTAL FROM tabela_de_clientes GROUP BY estado;
@@ -25,5 +27,10 @@ SELECT estado, bairro, SUM(limite_de_credito) AS LIMITE FROM tabela_de_clientes 
 SELECT estado, bairro, SUM(limite_de_credito) AS LIMITE FROM tabela_de_clientes
 WHERE cidade = 'Rio de Janeiro' GROUP BY estado, bairro ORDER BY bairro;
 
-/*SELECT COUNT(*) AS CONTADOR FROM itens_notas_fiscais WHERE codigo_do_produto = '1101035' GROUP BY quantidade ORDER BY quantidade DESC;*/
+SELECT bairro FROM tabela_de_clientes WHERE cidade = 'Rio de Janeiro' GROUP BY bairro;
 
+SELECT * FROM itens_notas_fiscais WHERE codigo_do_produto = '1101035' ORDER BY quantidade DESC;
+
+SELECT MAX(quantidade) AS MAIOR_QUANTIDADE FROM itens_notas_fiscais WHERE codigo_do_produto = '1101035';
+
+SELECT COUNT(*) FROM itens_notas_fiscais WHERE codigo_do_produto = '1101035' AND quantidade = 99;

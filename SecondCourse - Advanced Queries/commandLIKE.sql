@@ -1,4 +1,6 @@
-SELECT * FROM tabela_de_produtos WHERE sabor LIKE '%Maçã%';
+USE sucos_vendas;
+
+SELECT * FROM tabela_de_produtos WHERE sabor LIKE '%Maç%';
 
 SELECT * FROM tabela_de_produtos WHERE sabor LIKE 'Maçã%'; /*Sabores que COMEÇAM com 'Maçã'*/
 
