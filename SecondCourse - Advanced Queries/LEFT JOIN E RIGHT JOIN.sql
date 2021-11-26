@@ -31,3 +31,18 @@ LEFT JOIN tabela_de_clientes CLIENTE ON VENDEDOR.BAIRRO = CLIENTE.BAIRRO GROUP B
 
 SELECT VENDEDOR.BAIRRO AS VENDEDOR_BAIRRO, CLIENTE.BAIRRO AS CLIENTE_BAIRRO FROM tabela_de_vendedores VENDEDOR
 RIGHT JOIN tabela_de_clientes CLIENTE ON VENDEDOR.BAIRRO = CLIENTE.BAIRRO GROUP BY CLIENTE.CPF;
+
+SELECT customer.nome, customer.cpf, nota.cpf FROM tabela_de_clientes customer
+LEFT JOIN notas_fiscais nota ON customer.cpf = nota.cpf GROUP BY customer.cpf;
+
+SELECT customer.nome, customer.cpf, nota.cpf AS CPF_NA_NOTA FROM tabela_de_clientes customer
+LEFT JOIN notas_fiscais nota ON customer.cpf = nota.cpf WHERE nota.cpf IS NULL
+GROUP BY customer.cpf;
+
+
+SELECT customer.nome, customer.cpf, nota.cpf AS CPF_NA_NOTA FROM tabela_de_clientes customer
+LEFT JOIN notas_fiscais nota ON customer.cpf = nota.cpf WHERE nota.cpf IS NULL
+AND YEAER(nota.DATA_VENDA) = 2015 GROUP BY customer.cpf;
+
+SELECT customer.nome, customer.cpf, nota.cpf FROM tabela_de_clientes customer
+RIGHT JOIN notas_fiscais nota ON customer.cpf = nota.cpf GROUP BY customer.cpf;

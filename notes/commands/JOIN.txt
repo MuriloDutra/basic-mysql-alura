@@ -1,0 +1,11 @@
+INNER JOIN -> Recupera os valores correspondentes nas duas tabelas
+
+LEFT JOIN -> Recupera TODOS os valores da tabela da ESQUERDA e apenas os equivalentes da tabela da direita
+
+RIGHT JOIN -> Recupera TODOS os valores da tabela da DIREITA e apenas os equivalentes da tabela da esquerda
+
+FULL JOIN -> Recupera TODOS os valores das duas tabelas, mesmo se não tiver correspondencia
+
+CROSS JOIN -> Irá combinar todos os valores da tabela da direita e esquerda, também chamado de produto cartesiano.
+	EXEMPLO:
+		SELECT a.nome, b.hobby FROM tabela_esquerda a, tabela_direita b
