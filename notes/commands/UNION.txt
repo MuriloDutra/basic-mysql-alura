@@ -1,0 +1,5 @@
+UNION -> Junta duas consultas, mas importante, o resultado das duas consultas precisam ter o mesmo
+número de campos e o tipo deles precisam ser iguais.
+
+UNION ALL -> Faz a mesma coisa que o comando UNION, porém não aplica DISTINCT, assim se tiver dois valores iguais,
+ambos irão aparecer.
